@@ -2,8 +2,19 @@
   "name": "esbuild-plugin-env-module",
   "version": "1.0.0",
   "description": "Plugin created a virtual module and exports variables of the current environment from it",
-  "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle --target=node",
+    "watch": "microbundle watch --target=node --compress=false --raw"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tascen/esbuild-plugin-env-module.git"
@@ -13,10 +24,19 @@
     "exbuild",
     "environment"
   ],
-  "author": "Тимофеев Александр Дмитриевич",
+  "author": "Тимофеев Александр Дмитриевич (Tascen)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tascen/esbuild-plugin-env-module/issues"
   },
-  "homepage": "https://github.com/Tascen/esbuild-plugin-env-module#readme"
+  "homepage": "https://github.com/Tascen/esbuild-plugin-env-module#readme",
+  "devDependencies": {
+    "esbuild": "^0.14.54",
+    "microbundle": "^0.15.1"
+  },
+  "peerDependencies": {
+    "node": "^14.17.0",
+    "esbuild": "^0.14.54"
+  },
+  "dependencies": {}
 }
