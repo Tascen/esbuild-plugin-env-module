@@ -1,0 +1,22 @@
+{
+  "name": "esbuild-plugin-env-module",
+  "version": "1.0.0",
+  "description": "Plugin created a virtual module and exports variables of the current environment from it",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tascen/esbuild-plugin-env-module.git"
+  },
+  "keywords": [
+    "plugin",
+    "exbuild",
+    "environment"
+  ],
+  "author": "Тимофеев Александр Дмитриевич",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tascen/esbuild-plugin-env-module/issues"
+  },
+  "homepage": "https://github.com/Tascen/esbuild-plugin-env-module#readme"
+}
